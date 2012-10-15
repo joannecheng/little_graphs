@@ -1,6 +1,6 @@
 require 'rspec'
 require 'bundler/setup'
-require 'little-graphs'
+require 'little_graphs'
 
 RSpec.configure do |config|
 
