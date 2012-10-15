@@ -3,10 +3,8 @@ include Magick
 class LittleGraphs
   attr_accessor :datapoints, :width, :height
 
-  def initialize(datapoints = [])
-    @datapoints = datapoints
-    self.width
-    self.height
+  def initialize()
+    @datapoints = []
   end
 
   def width(width = 0)
@@ -17,7 +15,7 @@ class LittleGraphs
     @height = height
   end
 
-  def draw(filename = nil)
+  def draw(datapoints, filename = nil)
     width = @width
     height = @height
     if filename.nil?

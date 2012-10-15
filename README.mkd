@@ -1,0 +1,9 @@
+#Little Graphs
+
+## To Use:
+
+```ruby
+require 'little_graphs'
+graph = LittleGraphs.new()
+graph.draw([1, 2, 3, 4, 5])
+```
