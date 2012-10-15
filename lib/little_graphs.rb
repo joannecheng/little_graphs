@@ -1,4 +1,5 @@
 require 'quick_magick'
+
 class LittleGraphs
   attr_accessor :width, :height
 
@@ -18,23 +19,18 @@ class LittleGraphs
   def draw(datapoints, filename = nil)
     if filename.nil? then filename = "new.jpeg" end
     coordinates = define_coordinates(datapoints)
-    puts coordinates.inspect
 
-    f = Magick::Image.new(@width, @height) do 
-      line = Magick::Draw.new
-      line.stroke_opacity(0.8)
-      line.stroke_width(1)
-      line.polyline(coordinates)
-    end
+    f = QuickMagick::Image::solid(@width, @height, :white)
+    f.draw_polyline(coordinates, :fill => :white, :stroke => :blue)
 
-    f.write(filename)
+    f.save(filename)
   end
 
   def define_coordinates(datapoints)
     point_space = (@width-10)/datapoints.length
     coordinates = []
     datapoints.each_with_index do |datapoint, i|
-      coordinates.push [i*point_space, datapoint]
+      coordinates.push [@width -i*point_space, datapoint]
     end
     coordinates.flatten
   end
