@@ -1,5 +1,5 @@
 source 'http://rubygems.org'
 gemspec
-gem 'rmagick'
+gem 'quick_magick'
 gem 'rspec'
 
