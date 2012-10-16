@@ -33,7 +33,7 @@ describe LittleGraphs do
       it 'finds x,y coordinates for 1D array' do
         lg = LittleGraphs.new
         coords = lg.define_coordinates([1, 2, 3, 4, 5])
-        #coords.should == [1,0, 10, 2, 20, 3, 30, 4, 40, 5]  
+        coords.should == [5, 28, 25, 21, 45, 14, 65, 7, 85, 0]
       end
     end
   end

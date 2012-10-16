@@ -18,6 +18,7 @@ class LittleGraphs
       f.to_blob
     else
       f.save(filename)
+    end
   end
 
   def define_coordinates(datapoints)

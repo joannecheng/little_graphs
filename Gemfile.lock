@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    little_graphs (0.0.0)
+    little_graphs (1.0.1)
       quick_magick
 
 GEM
