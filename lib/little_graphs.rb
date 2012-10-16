@@ -3,16 +3,8 @@ require 'quick_magick'
 class LittleGraphs
   attr_accessor :width, :height
 
-  def initialize(width = nil, height = nil)
-    if width.nil? then self.width else self.width(width) end
-    if height.nil? then self.height else self.height(height) end
-  end
-
-  def width(width = 60)
+  def initialize(width = 100, height = 35)
     @width = width
-  end
-
-  def height(height = 20)
     @height = height
   end
 
@@ -27,12 +19,20 @@ class LittleGraphs
   end
 
   def define_coordinates(datapoints)
+    margin = 5
     point_space = @width/datapoints.length
+    translated_datapoints = translate_datapoints(datapoints)
     coordinates = []
-    datapoints.each_with_index do |datapoint, i|
-      coordinates.push [i*point_space+5, @height-5-datapoint]
+
+    translated_datapoints.each_with_index do |datapoint, i|
+      coordinates.push [i*point_space+margin, @height-margin-datapoint]
     end
     coordinates.flatten
+  end
+
+  def translate_datapoints(datapoints)
+
+    datapoints
   end
 
 end

@@ -13,8 +13,8 @@ describe LittleGraphs do
     context 'without width and height' do
       it 'sets width and height to default' do
         lg = LittleGraphs.new
-        lg.width.should == 60
-        lg.height.should == 20
+        lg.width.should == 100
+        lg.height.should == 35
       end
     end
   end
@@ -33,8 +33,15 @@ describe LittleGraphs do
       it 'finds x,y coordinates for 1D array' do
         lg = LittleGraphs.new
         coords = lg.define_coordinates([1, 2, 3, 4, 5])
-        #coords.should == [0, 1, 10, 2, 20, 3, 30, 4, 40, 5]  
+        #coords.should == [1,0, 10, 2, 20, 3, 30, 4, 40, 5]  
       end
+    end
+  end
+
+  describe '#translate_datapoints' do
+    context 'datapoints' do
+      lg = LittleGraphs.new
+      datapoints = [1, 2, 3, 4, 5]
     end
   end
 end
