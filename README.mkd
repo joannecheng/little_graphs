@@ -5,5 +5,6 @@
 ```ruby
 require 'little_graphs'
 graph = LittleGraphs.new()
-graph.draw([1, 2, 3, 4, 5])
+graph.draw([12, 3, 0, 9, 10, 8, 2, 4, 1], "example.jpeg")
 ```
+![example graph](example.jpeg)
