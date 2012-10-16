@@ -30,9 +30,15 @@ class LittleGraphs
     coordinates.flatten
   end
 
-  def translate_datapoints(datapoints)
+  def translate_domain(datapoints)
+    point_space = @width/datapoints.length
+  end
 
-    datapoints
+  def translate_datapoints(datapoints)
+    height = @height - 5 # add a margin
+    point_space = height/(datapoints.max - datapoints.min)
+
+    datapoints.map { |datapoint| datapoint * point_space }
   end
 
 end
