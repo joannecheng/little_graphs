@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name      = 'little_graphs'
-  s.version   = '0.0.0' 
+  s.version   = '1.0.0' 
   s.date      = '2012-10-15'
   s.summary   = 'Sparklines'
   s.authors   = ['J. Cheng']
