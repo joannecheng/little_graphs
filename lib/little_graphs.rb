@@ -27,10 +27,10 @@ class LittleGraphs
   end
 
   def define_coordinates(datapoints)
-    point_space = (@width-10)/datapoints.length
+    point_space = @width/datapoints.length
     coordinates = []
     datapoints.each_with_index do |datapoint, i|
-      coordinates.push [@width -i*point_space, datapoint]
+      coordinates.push [i*point_space+5, @height-5-datapoint]
     end
     coordinates.flatten
   end
