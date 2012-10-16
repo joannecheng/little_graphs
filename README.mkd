@@ -7,4 +7,4 @@ require 'little_graphs'
 graph = LittleGraphs.new()
 graph.draw([12, 3, 0, 9, 10, 8, 2, 4, 1], "example.jpeg")
 ```
-![example graph](https://github.com/joannecheng/little-graphs/blob/master/example.jpeg)
+![example graph](http://github.com/joannecheng/little-graphs/blob/master/example.jpeg)
