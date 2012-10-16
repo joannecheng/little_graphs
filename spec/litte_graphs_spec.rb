@@ -43,7 +43,7 @@ describe LittleGraphs do
       lg = LittleGraphs.new
       datapoints = [1, 2, 3, 4, 5]
       translated_datapoints = lg.translate_datapoints(datapoints)
-      translated_datapoints.should == [7, 14, 21, 28, 35]
+      translated_datapoints.should == [23, 16, 9, 2, -5]
     end
   end
 end

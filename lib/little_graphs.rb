@@ -25,7 +25,7 @@ class LittleGraphs
     coordinates = []
 
     translated_datapoints.each_with_index do |datapoint, i|
-      coordinates.push [i*point_space+margin, @height-margin-datapoint]
+      coordinates.push [i*point_space+margin, datapoint]
     end
     coordinates.flatten
   end
@@ -38,7 +38,7 @@ class LittleGraphs
     height = @height - 5 # add a margin
     point_space = height/(datapoints.max - datapoints.min)
 
-    datapoints.map { |datapoint| datapoint * point_space }
+    datapoints.map { |datapoint| height - datapoint * point_space }
   end
 
 end
