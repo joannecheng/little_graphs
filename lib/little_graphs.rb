@@ -41,7 +41,7 @@ class LittleGraphs
     height = @height - 5 # add a margin
     point_space = height/(datapoints.max - datapoints.min)
 
-    datapoints.map { |datapoint| @height - datapoint * point_space }
+    datapoints.map { |datapoint| @height - datapoint * point_space - datapoints.min * point_space }
   end
 
 end
