@@ -38,10 +38,13 @@ class LittleGraphs
   end
 
   def translate_datapoints(datapoints)
-    height = @height - 5 # add a margin
-    point_space = height/(datapoints.max - datapoints.min)
+    height = @height # add a margin
+    point_space = height/(datapoints.max - datapoints.min + 1)
 
-    datapoints.map { |datapoint| @height - datapoint * point_space - datapoints.min * point_space }
+    datapoints.map do |datapoint|
+      puts @height
+      @height - (datapoint - datapoints.min) * point_space 
+    end
   end
 
 end
